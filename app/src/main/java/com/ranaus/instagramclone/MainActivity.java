@@ -2,6 +2,7 @@ package com.ranaus.instagramclone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,17 +20,19 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText inputValue;
     TextView getData;
     String getAllData;
+    Button btnSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getData = (TextView) findViewById(R.id.getDataFromServer);
+        btnSignUp = (Button) findViewById(R.id.btnSignUp);
 
         getData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 getAllData = "";
 
                 ParseQuery<ParseObject> parseQuery = ParseQuery.getQuery("InputValues");
+
+
                 parseQuery.findInBackground(new FindCallback<ParseObject>() {
                     @Override
                     public void done(List<ParseObject> objects, ParseException e) {
@@ -61,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
+
+
     }
 
     public void btnSubmit(View view) {
@@ -83,5 +91,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public void onClick(View view) {
+        //btnSignUp = (Button) findViewById(R.id.btnSignUp);
+        switch (view.getId())
+        {
+            case R.id.btnSignUp:
+                Intent intent = new Intent(MainActivity.this,SignUpLoginActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
 }
