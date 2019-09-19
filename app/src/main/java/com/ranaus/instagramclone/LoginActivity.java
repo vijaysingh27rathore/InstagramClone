@@ -11,6 +11,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        findViewById(R.id.log_in_LoginAct).animate().alphaBy(0.1f);
+        findViewById(R.id.log_in_LoginAct).animate().alphaBy(0.9f);
     }
 }
