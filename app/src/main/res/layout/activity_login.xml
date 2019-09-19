@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="3">
-
     </LinearLayout>
 
         <LinearLayout
@@ -92,7 +91,6 @@
                     android:layout_height="wrap_content"
                     android:text="Get help signing in."
                     android:textStyle="bold" />
-
             </LinearLayout>
 
             <TextView
@@ -131,7 +129,6 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="20dp"
                     />
-
             </LinearLayout>
 
             <LinearLayout
@@ -151,12 +148,9 @@
                     android:layout_height="wrap_content"
                     android:text="Sign up."
                     android:textStyle="bold" />
-
             </LinearLayout>
 
         </LinearLayout>
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -179,8 +173,6 @@
             android:text="Developed by RANAUS \u00a9 2019"
             android:layout_marginBottom="15dp"
             />
-
-
     </LinearLayout>
 
 </LinearLayout>

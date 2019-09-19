@@ -36,5 +36,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.create_new_account_MainAct).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,CreateAccount.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
